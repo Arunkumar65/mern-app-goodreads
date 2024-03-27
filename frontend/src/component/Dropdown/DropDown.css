@@ -1,0 +1,7 @@
+.dropdown-items {
+    padding-left: 14px;
+}
+
+.group-dropdown .dropdown-menu {
+    transform: translate3d(0px, 35.6px, 0px) !important;
+}

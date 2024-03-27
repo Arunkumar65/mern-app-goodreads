@@ -1,0 +1,45 @@
+h4 {
+    font-family: "Merriweather", serif;
+}
+
+@font-face {
+    font-family: proximaNova;
+    src: url('./assets/fonts/ProximaNova-Regular.woff');
+}
+
+.color-red {
+    color: red;
+}
+
+body {
+    font-family: proximaNova;
+    background-color: rgba(244, 241, 234, 0.5);
+}
+
+.text-color-brown {
+    color: #1E1915 !important;
+}
+
+.profile-name {
+    text-transform: uppercase;
+}
+
+.dropdown-menu-li {
+    text-decoration: none;
+    color: #333333;
+    display: block;
+    width: max-content;
+    margin-top: 10px;
+}
+
+.dropdown-menu-li:hover {
+    text-decoration: underline !important;
+}
+
+.link-text {
+    color: #00635D;
+}
+
+.body-content {
+    padding-top: 110px;
+}

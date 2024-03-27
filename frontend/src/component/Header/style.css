@@ -1,0 +1,18 @@
+.logo-header {
+    width: 970px;
+    margin: 0 auto;
+}
+
+
+.header-sec {
+    background-color: #f4f2e9;
+    display: flex;
+    align-items: center;
+    height: 85px;
+    position: relative;
+}
+
+.top-navbar {
+    position: fixed;
+    z-index: 9;
+}

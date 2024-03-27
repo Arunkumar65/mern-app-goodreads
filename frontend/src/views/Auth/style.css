@@ -1,0 +1,141 @@
+.login-card {
+    width: 290px;
+    float: right;
+    padding: 24px;
+    background: #FFFFFF;
+    border: 1px solid #D8D8D8;
+    border-radius: 10px;
+    position: sticky;
+}
+
+.login-container {
+    width: 970px;
+    margin: 0 auto;
+    margin-top: -47px
+}
+
+.login-bg {
+    width: 100%;
+    height: 500px;
+    background-image: url('../../assets/img/login-bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.signin-text {
+    margin-top: 10px;
+}
+
+.login-card {
+    text-align: center;
+}
+
+.login-form-header {
+    font-family: "Merriweather", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.auth-btn {
+    background-color: #382110;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.auth-form-container {
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.form-heading {
+    font-size: 38px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: #000;
+}
+
+input.input-text-box.form-control {
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 24px !important;
+    box-shadow: none !important;
+}
+
+.input-text-box:focus {
+    border: 1px solid #382110 !important;
+    box-shadow: 0 0 0 2px #dee0ed !important;
+}
+
+.input-text-box:hover {
+    background-color: #eee;
+}
+
+.auth-reg-button {
+    background-color: #1E1915;
+    color: #fff;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+
+.auth-reg-button-signup {
+    color: #1E1915;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    margin-top: 10px;
+    border: 2px solid #ccc;
+    background-color: #fff;
+}
+
+.policy-text {
+    margin-top: 20px;
+}
+
+.align-lft {
+    margin-left: 5px;
+}
+
+.text-devider {
+    text-align: center;
+    position: relative;
+    top: 2px;
+    padding-top: 1px;
+    margin-bottom: 14px;
+    line-height: 0;
+    z-index: 99999;
+    margin-top: 30px;
+}
+
+.text-devider:after {
+    content: "";
+    display: block;
+    border-top: 0.1rem solid #767676;
+}
+
+.text-devider span {
+    line-height: 0;
+    font-size: 16px;
+    color: #1E1915;
+    font-weight: 400;
+    z-index: 2;
+    position: relative;
+    background-color: #fff;
+    padding: 0 8px 0 7px;
+    color: #000;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    
+}

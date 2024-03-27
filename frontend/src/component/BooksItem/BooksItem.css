@@ -1,0 +1,129 @@
+.book-item-container {
+    border: 1px solid #D8D8D8;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+    margin-bottom: 16px;
+    margin-left: 20px;
+    padding-top: 8px;
+    hyphens: auto;
+    line-height: 1.5;
+    padding-bottom: 20px;
+}
+
+.goodreads-icon {
+    width: 40px;
+    height: 40px;
+    background-image: url('../../assets/img/goodreads_icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: -22px;
+    border-radius: 50%;
+}
+
+.container-content {
+    padding: 0 20px;
+    margin-top: -34px;
+    margin-left: 13px;
+}
+
+.book-item-flex {
+    display: flex;
+    gap: 10px;
+}
+
+.book-item-label {
+    font-family: "Merriweather", serif;
+    font-size: 16px;
+    color: #333333;
+    font-weight: 800;
+    text-decoration: auto;
+}
+
+.book-item-label:hover {
+    text-decoration: underline;
+}
+
+.author-name-h {
+    color: #333333;
+    font-family: "Merriweather", serif;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.author-name-a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.author-name-a:hover {
+    color: #333333;
+    text-decoration: underline;
+}
+
+.g-icon {
+    width: 14px;
+    height: 14px;
+    margin-left: 4px;
+    vertical-align: middle;
+    background-image: url('../../assets/img/gr_author_badge.svg');
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.drop-down-btn {
+    background-color: #409D69 !important;
+    color: #fff;
+}
+
+.group-dropdown button.btn.btn-primary {
+    background-color: #409D69 !important;
+    border: #409D69 !important;
+}
+
+.group-dropdown.input-group {
+    flex-wrap: nowrap;
+}
+
+.discription {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.detail-book-img {
+    width: 250px;
+    border-radius: 0px 15px 15px 0px;
+}
+
+.book-img-width {
+    width: 165px;
+}
+
+.book-name {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.book-title {
+    font-style: oblique;
+    color: #707070;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.author-name-lg {
+    color: #333333;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.author-name-lg:hover {
+    color: #333333;
+    text-decoration: underline;
+}
+
+.star-rating{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
