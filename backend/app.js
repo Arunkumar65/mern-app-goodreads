@@ -1,7 +1,7 @@
 import express from "express"
-// import './config/database';
-import { userRouter } from './router/user';
-import { InfiniteScroll } from "./controller/infiniteScroll";
+import './config/database.js';
+import { userRouter } from './router/user.js';
+import { InfiniteScroll } from "./controller/infiniteScroll.js";
 import 'dotenv/config';
 
 const app = express();
