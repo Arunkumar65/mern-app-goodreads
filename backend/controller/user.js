@@ -2,20 +2,19 @@
 import Users from "../models/users";
 import bcrypt from "bcrypt";
 
-// const bcryptHash = (password) => {
-//     console.log(password)
-//     return bcrypt.hashSync(password, 10);
-// }
+const bcryptHash = (password) => {
+    return bcrypt.hashSync(password, 10);
+}
 
 const signupUser = async (req, res) => {
-    
+
     const { username, email, password } = req.body;
-    console.log(req.body, password, "data....")
+
 
     const userData = {
         username: username,
         email: email,
-        // password: bcryptHash(password)
+        password: bcryptHash(password)
     }
     const existing_customer = await Users.findOne({ email: email });
     if (existing_customer) {
@@ -28,15 +27,16 @@ const signupUser = async (req, res) => {
         const newUser = new Users(userData);
         const response = await newUser.save();
         res.json({
-            data: response,
+            data: null,
             statue: true,
-            message: "Signup successfully"
+            message: "User signup successfully"
         })
     }
 }
 
 const userLogin = async (req, res) => {
     const { email, password } = req.body;
+    console.log(email, password, "data...")
     const verifyUser = await Users.findOne({ email: email });
     if (!verifyUser) {
         return res.json({
@@ -58,7 +58,7 @@ const userLogin = async (req, res) => {
 
     res.json({
         data: null,
-        status: false,
+        status: true,
         message: "User login successfully"
     })
 }
