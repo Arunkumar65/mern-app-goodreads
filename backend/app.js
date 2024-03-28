@@ -1,5 +1,5 @@
 import express from "express"
-import './config/database';
+// import './config/database';
 import { userRouter } from './router/user';
 import { InfiniteScroll } from "./controller/infiniteScroll";
 import 'dotenv/config';
@@ -7,7 +7,7 @@ import 'dotenv/config';
 const app = express();
 app.use(express.json());
 
-const port = process.env.MONGO_URL;
+const port = process.env.PORT || 5000;
 
 app.get('/', (req, res) => {
     res.send("Hello world")
