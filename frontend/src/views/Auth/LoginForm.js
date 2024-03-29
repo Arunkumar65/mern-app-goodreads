@@ -5,6 +5,7 @@ import { FormInputs } from '../../component/FormInputs/FormInputs';
 import { Link, useNavigate } from "react-router-dom";
 import { validation } from "../../utils/utils";
 import { postRequest } from "../../utils/api";
+import { toast } from 'react-toastify';
 
 export const LoginForm = () => {
 
@@ -30,19 +31,27 @@ export const LoginForm = () => {
     const login = () => {
         const url = 'users/login';
         let data = {
-            name: userDetails.email,
+            email: userDetails.email,
             password: userDetails.password
         }
         postRequest(url, data).then((response) => {
-            console.log(response);
+            if (response.data.status) {
+                toast.success(response.data.message, {
+                    position: "top-center"
+                });
+                navigate('/home', { replace: true });
+                localStorage.setItem('isAuthenticated', response.data.token);
+            } else {
+                toast.error(response.data.message, {
+                    position: "top-center"
+                });
+            }
         }).catch((err) => {
             console.log(err);
         })
     }
 
     const validateLogin = () => {
-        navigate('/home', { replace: true });
-        return
         if (validation(1, userDetails.email)['success'] && validation(3, userDetails.password)['success']) {
             login();
         } else {
@@ -51,8 +60,6 @@ export const LoginForm = () => {
         }
         setError({ ...error });
     }
-
-    console.log(error)
 
     return (
         <>

@@ -3,7 +3,6 @@ import Form from 'react-bootstrap/Form';
 
 export const FormInputs = (props) => {
     const { labelProps, required, validate } = props;
-    console.log(validate)
     return (
         <Form>
             <Form.Group className="mb-3">

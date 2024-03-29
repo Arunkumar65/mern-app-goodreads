@@ -55,7 +55,7 @@ export const MenuNavbar = () => {
 
                         <Dropdown.Menu className='menu-icon-dropdown'>
                             <div className='profile-name'>Arun</div>
-                            <Link className='dropdown-menu-li'>Profile</Link>
+                            <Link to={'/profile'} className='dropdown-menu-li'>Profile</Link>
                             <Link className='dropdown-menu-li'>Friends</Link>
                             <Link className='dropdown-menu-li'>Groups</Link>
                             <Link className='dropdown-menu-li'>Sign out</Link>

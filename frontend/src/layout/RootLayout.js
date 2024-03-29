@@ -10,17 +10,32 @@ export const RootLayout = () => {
 
   const { pathname } = useLocation();
 
-  return (
-    <div>
-      <ToastContainer />
-      {(pathname === '/') && <Header />}
-      {pathname !== 'login' && pathname !== 'register' && <><TopHeader />
+  const renderLayout = () => {
+    if (pathname === '/') {
+      return <>
+        <Header />
+        <Outlet />
+      </>
+    } else if (['/login', '/register'].includes(pathname)) {
+      return <Outlet />
+    } else {
+      return <>
+        <TopHeader />
         <div className='navbar-container'>
           <MenuNavbar />
-        </div></>}
-      <div className="body-content">
-        <Outlet />
-      </div>
-    </div>
+        </div>
+        <div className="body-content">
+          <Outlet />
+        </div>
+      </>
+    }
+  }
+
+  return (
+
+    <>
+      <ToastContainer />
+      {renderLayout()}
+    </>
   )
 }

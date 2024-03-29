@@ -1,6 +1,7 @@
 
 import Users from "../models/users";
 import bcrypt from "bcrypt";
+import { generateToken } from "../utils/generateToken";
 
 const bcryptHash = (password) => {
     return bcrypt.hashSync(password, 10);
@@ -36,7 +37,7 @@ const signupUser = async (req, res) => {
 
 const userLogin = async (req, res) => {
     const { email, password } = req.body;
-    console.log(email, password, "data...")
+
     const verifyUser = await Users.findOne({ email: email });
     if (!verifyUser) {
         return res.json({
@@ -55,10 +56,12 @@ const userLogin = async (req, res) => {
             message: "invalid password"
         })
     }
-
-    res.json({
+    const token = generateToken(verifyUser._id);
+    console.log(verifyUser)
+    return res.json({
         data: null,
         status: true,
+        token: token,
         message: "User login successfully"
     })
 }

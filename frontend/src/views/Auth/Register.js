@@ -2,13 +2,13 @@ import React, { useState } from 'react'
 import './style.css';
 import { Logo } from '../../component/Logo/Logo';
 import { FormInputs } from '../../component/FormInputs/FormInputs';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { validation } from '../../utils/utils';
 import { postRequest } from '../../utils/api';
 import { toast } from 'react-toastify';
 
 export const Register = () => {
-
+  const navigate = useNavigate();
   const [userDetails, setUserDetails] = useState({
     name: "",
     email: "",
@@ -29,14 +29,23 @@ export const Register = () => {
   };
 
   const signup = async () => {
-    let url = "users/login";
+    let url = "users/signup";
     let data = {
       name: userDetails.name,
       email: userDetails.email,
       password: userDetails.password
     }
     postRequest(url, data).then((response) => {
-      console.log(response);
+      if (response.data.status) {
+        toast.success(response.data.message, {
+          position: "top-center"
+        });
+        navigate('/login', { replace: true });
+      } else {
+        toast.error(response.data.message, {
+          position: "top-center"
+        });
+      }
     }).catch((err) => {
       console.log(err);
     })
